@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.0 on win32)" generated="2024-08-31T00:50:42.916125" rpa="false" schemaversion="5">
+<suite id="s1" name="YahooFinanceAccountCreation" source="C:\Users\rpinnaka\PycharmProjects\QuestAssignment\TestCases\YahooFinanceAccountCreation.robot">
+<test id="s1-t1" name="TC_YahooFinanceAccountCreation" line="9">
+<kw name="OPEN MY BROWSER" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:43.128588" level="INFO">Opening browser 'firefox' to base url 'https://finance.yahoo.com/'.</msg>
+<arg>${DATA_BROWSER_URL}</arg>
+<arg>${DATA_BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-31T00:50:43.128588" elapsed="8.948512"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-31T00:50:52.077100" elapsed="0.276516"/>
+</kw>
+<arg>${DATA_BROWSER_URL}</arg>
+<arg>${DATA_BROWSER_NAME}</arg>
+<status status="PASS" start="2024-08-31T00:50:43.127587" elapsed="9.226029"/>
+</kw>
+<kw name="CLICK SIGN IN" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10 SECONDS</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-08-31T00:50:52.356632" elapsed="0.004990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOC_SIGNIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-31T00:50:52.362622" elapsed="0.269185"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:52.631807" level="INFO">Clicking element 'xpath://div[@id='login-container']/a[text()='Sign in']'.</msg>
+<arg>${LOC_SIGNIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:52.631807" elapsed="4.249301"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:50:52.354620" elapsed="4.526488"/>
+</kw>
+<kw name="CLICK SIGN UP" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOC_SIGNUP_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-31T00:50:56.881633" elapsed="0.017955"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:56.899588" level="INFO">Clicking element 'xpath://p[@class='sign-up-link']'.</msg>
+<arg>${LOC_SIGNUP_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:56.899588" elapsed="0.777572"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:50:56.881633" elapsed="0.795527"/>
+</kw>
+<kw name="ENTER PERSONAL DETAILS" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:57.678157" level="INFO">Typing text 'Ramakrishna' into text field 'id:usernamereg-firstName'.</msg>
+<arg>${LOC_FIRST_NAME}</arg>
+<arg>${DATA_FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:57.678157" elapsed="0.067144"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:57.745301" level="INFO">Typing text 'Pinnaka' into text field 'id:usernamereg-lastName'.</msg>
+<arg>${LOC_LAST_NAME}</arg>
+<arg>${DATA_LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:57.745301" elapsed="0.027082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:57.773383" level="INFO">Typing text 'rampin09' into text field 'id:usernamereg-userId'.</msg>
+<arg>${LOC_USER_ID}</arg>
+<arg>${DATA_USER_ID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:57.773383" elapsed="0.023427"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:57.796810" level="INFO">Typing text 'Awsert@889!' into text field 'id:usernamereg-password'.</msg>
+<arg>${LOC_PASS_WORD}</arg>
+<arg>${DATA_PASS_WORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:57.796810" elapsed="0.027515"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:57.825331" level="INFO">Selecting options from selection list 'mm' by label May.</msg>
+<arg>mm</arg>
+<arg>${DATA_MONTH_BIRTH}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-08-31T00:50:57.825331" elapsed="0.242681"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:58.069011" level="INFO">Typing text '24' into text field 'id:usernamereg-day'.</msg>
+<arg>${LOC_DAY_BIRTH}</arg>
+<arg>${DATA_DAY_BIRTH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:58.068012" elapsed="0.041515"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:58.109527" level="INFO">Typing text '1883' into text field 'id:usernamereg-year'.</msg>
+<arg>${LOC_YEAR_BIRTH}</arg>
+<arg>${DATA_YEAR_BIRTH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:58.109527" elapsed="0.030016"/>
+</kw>
+<arg>${DATA_FIRST_NAME}</arg>
+<arg>${DATA_LAST_NAME}</arg>
+<arg>${DATA_USER_ID}</arg>
+<arg>${DATA_PASS_WORD}</arg>
+<arg>${DATA_MONTH_BIRTH}</arg>
+<arg>${DATA_DAY_BIRTH}</arg>
+<arg>${DATA_YEAR_BIRTH}</arg>
+<status status="PASS" start="2024-08-31T00:50:57.678157" elapsed="0.461386"/>
+</kw>
+<kw name="CLICK NEXT" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:58.139543" level="INFO">Clicking element 'id:reg-submit-button'.</msg>
+<arg>${LOC_NEXT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:58.139543" elapsed="1.685801"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:50:58.139543" elapsed="1.685801"/>
+</kw>
+<kw name="ENTER PHONE NUMBER" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOC_PHONE_NUM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-31T00:50:59.825344" elapsed="0.016764"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:59.842108" level="INFO">Typing text '8985634631' into text field 'id:usernamereg-phone'.</msg>
+<arg>${LOC_PHONE_NUM}</arg>
+<arg>${DATA_PHONE_NUM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:59.842108" elapsed="0.036098"/>
+</kw>
+<arg>${DATA_PHONE_NUM}</arg>
+<status status="PASS" start="2024-08-31T00:50:59.825344" elapsed="0.052862"/>
+</kw>
+<kw name="CLICK CODE BY TEXT" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-31T00:50:59.879209" level="INFO">Clicking element 'id:reg-sms-button'.</msg>
+<arg>${LOC_CODE_BY_TEXT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-31T00:50:59.879209" elapsed="3.530222"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:50:59.879209" elapsed="3.530222"/>
+</kw>
+<kw name="CLOSE MY BROWSER" owner="YahooFinanceAccountCreationKeywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-31T00:51:03.410431" elapsed="3.368321"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:51:03.410431" elapsed="3.369266"/>
+</kw>
+<status status="PASS" start="2024-08-31T00:50:43.127587" elapsed="23.652110"/>
+</test>
+<status status="PASS" start="2024-08-31T00:50:42.918020" elapsed="23.862659"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="YahooFinanceAccountCreation">YahooFinanceAccountCreation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
